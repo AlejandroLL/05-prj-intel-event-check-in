@@ -25,7 +25,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
@@ -84,6 +85,40 @@ body {
   background: white;
   border-radius: 16px;
   box-shadow: 0 5px 24px rgba(0, 60, 116, 0.07);
+  text-align: center;
+}
+
+/* Welcome message container */
+.welcome-container {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Celebration message container */
+.celebration-container {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  animation: slideIn 0.4s ease-out;
   text-align: center;
 }
 
@@ -346,6 +381,23 @@ select {
   font-size: 15px;
   font-weight: 500;
   color: #475569;
+}
+
+.attendee-names {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.attendee-names:empty {
+  display: none;
+}
+
+.attendee-name {
+  padding: 4px 0;
 }
 
 /* Mobile responsive */

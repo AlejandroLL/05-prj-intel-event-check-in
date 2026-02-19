@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,6 +10,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <!-- Confetti library for celebration effect -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
   </head>
   <body>
     <!-- Hero section with Intel branding -->
@@ -24,6 +26,12 @@
         </p>
       </div>
     </div>
+    <!-- Celebration message -->
+    <div id="celebrationWrapper" class="container" style="display: none">
+      <div id="celebrationContainer" class="celebration-container">
+        <p id="celebrationMessage"></p>
+      </div>
+    </div>
     <!-- Attendance tracking -->
     <div class="attendance-tracker">
       <div class="attendance-header">
@@ -35,8 +43,14 @@
       </div>
     </div>
     <div class="container">
-      <!-- Feedback message -->
-      <p id="greeting"></p>
+      <!-- Welcome message -->
+      <div
+        id="welcomeContainer"
+        class="welcome-container"
+        style="display: none"
+      >
+        <p id="welcomeMessage"></p>
+      </div>
 
       <!-- Check-in form -->
       <form class="check-in" id="checkInForm">
@@ -70,14 +84,17 @@
           <div class="team-card water">
             <span class="team-name">🌊 Team Water Wise</span>
             <span class="team-count" id="waterCount">0</span>
+            <div class="attendee-names" id="waterNames"></div>
           </div>
           <div class="team-card zero">
             <span class="team-name">🌿 Team Net Zero</span>
             <span class="team-count" id="zeroCount">0</span>
+            <div class="attendee-names" id="zeroNames"></div>
           </div>
           <div class="team-card power">
             <span class="team-name">⚡ Team Renewables</span>
             <span class="team-count" id="powerCount">0</span>
+            <div class="attendee-names" id="powerNames"></div>
           </div>
         </div>
       </div>
