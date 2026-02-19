@@ -89,12 +89,13 @@ function loadFromLocalStorage() {
       celebrationWrapper.style.display = "block";
     }
   } else {
-    /**/
+    /*
     //If no saved data, use testing defaults
     attendeeCount.textContent = "48";
     count = 48;
     let percentage = Math.round((count / maxCount) * 100) + "%";
     progressBar.style.width = percentage;
+    */
   }
 }
 
